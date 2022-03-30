@@ -52,9 +52,16 @@ ul {
 /* Прячем заголовки */
 .visually-hidden {
   position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
   clip: rect(0 0 0 0);
+  overflow: hidden;
 }
-
 /* Студия и портфолио хедер */
 .container {
   width: 1200px;
@@ -124,15 +131,31 @@ ul {
 .contact-link:hover,
 .contact-link:focus {
   color: var(--accent-txt);
+  fill: var(--accent-txt);
+}
+.contact-icon {
+  fill: currentColor;
+}
+.contact-icon {
+  margin-right: 10px;
 }
 
 /* Студия меин */
 .hero {
+  max-width: 1600px;
+  height: 600px;
   padding-top: 200px;
   padding-bottom: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)),
+    url(../images/bg-img.jpg);
   background-color: var(--dark-bg);
+  background-position: center;
+  background-size: cover;
   text-align: center;
 }
+
 .hero-title {
   width: 696px;
   margin-left: auto;
@@ -174,6 +197,18 @@ ul {
 .benefits-item:not(:last-child) {
   margin-right: 30px;
 }
+
+.benefits-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 270px;
+  height: 120px;
+  background-color: var(--light-bg);
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+
 .benefits-title {
   font-weight: 700;
   font-size: 14px;
@@ -213,6 +248,9 @@ ul {
 }
 
 .team-item {
+  border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
   background-color: var(--primary-txt--mode-black);
   text-align: center;
 }
@@ -238,6 +276,29 @@ ul {
   line-height: 1.19;
   letter-spacing: 0.03em;
   color: var(--secondary-txt--mode-light);
+}
+.team-icons {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin-top: 16px;
+}
+.list-icons:not(:last-child) {
+  margin-right: 10px;
+}
+.link-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  fill: #afb1b8;
+}
+.link-icons:hover,
+.link-icons:focus {
+  background-color: var(--accent-txt);
+  fill: var(--primary-txt--mode-black);
 }
 
 /* Студия и портфолио футер */

@@ -280,7 +280,6 @@ ul {
 .team-icons {
   display: flex;
   justify-content: center;
-  list-style: none;
   margin-top: 16px;
 }
 .list-icons:not(:last-child) {
@@ -299,6 +298,36 @@ ul {
 .link-icons:focus {
   background-color: var(--accent-txt);
   fill: var(--primary-txt--mode-black);
+}
+.clients-title {
+  text-align: center;
+  font-size: 36px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+}
+.cliens-list {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.clients-item:not(:last-child) {
+  margin-right: 30px;
+}
+.clients-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill: #afb1b8;
+  width: 170px;
+  height: 92px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+}
+.clients-link:hover,
+.clients-link:focus {
+  fill: var(--accent-txt);
+  border-color: var(--accent-txt);
 }
 
 /* Студия и портфолио футер */
@@ -326,6 +355,44 @@ ul {
 }
 .address-item:not(:last-child) {
   margin-bottom: 9px;
+}
+.footer-container {
+  display: flex;
+}
+.networks {
+  margin-left: 70px;
+  padding-top: 12px;
+}
+.networks-txt {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--primary-txt--mode-black);
+  margin-bottom: 20px;
+  /* padding-top: 12px; */
+}
+.networks-list {
+  display: flex;
+}
+.networks-item:not(:last-child) {
+  margin-right: 10px;
+}
+.networks-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.networks-link:hover,
+.networks-link:focus {
+  background-color: var(--accent-txt);
+}
+.networks-icons {
+  fill: var(--primary-txt--mode-black);
 }
 
 /* Страница Портфолио */
@@ -373,9 +440,13 @@ ul {
 .examples-item:nth-last-child(-n + 3) {
   margin-bottom: 0;
 }
-
 .examples-item:nth-child(3n) {
   margin-right: 0;
+}
+.examples-item:hover,
+.examples-item:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .examples-description {
   padding: 20px 24px;
